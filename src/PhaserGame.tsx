@@ -13,7 +13,7 @@ interface IProps {
 
 export const PhaserGame = forwardRef<IRefPhaserGame, IProps>(
 	function PhaserGame({ currentActiveScene }, ref) {
-		const game = useRef<Phaser.Game | null>(null!);
+		const game = useRef<Phaser.Game | null>(null);
 
 		useLayoutEffect(() => {
 			if (game.current === null) {
