@@ -1,4 +1,4 @@
-import { AUTO, Game } from "phaser";
+import { AUTO, Scale, Game } from "phaser";
 import { Boot } from "./scenes/Boot";
 import { Game as MainGame } from "./scenes/Game";
 import { GameOver } from "./scenes/GameOver";
@@ -11,6 +11,9 @@ const config: Phaser.Types.Core.GameConfig = {
   type: AUTO,
   width: 1024,
   height: 768,
+  scale: {
+    mode: Scale.FIT,
+  },
   parent: "game-container",
   backgroundColor: "#028af8",
   scene: [Boot, Preloader, MainMenu, MainGame, GameOver],

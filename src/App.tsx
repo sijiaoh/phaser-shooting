@@ -66,9 +66,8 @@ function App() {
   };
 
   return (
-    <div id="app">
-      <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
-      <div>
+    <div className="position-relative w-full h-full">
+      <div className="absolute">
         <div>
           <Button onClick={changeScene}>Change Scene</Button>
         </div>
@@ -85,6 +84,7 @@ function App() {
           <Button onClick={addSprite}>Add New Sprite</Button>
         </div>
       </div>
+      <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
     </div>
   );
 }
